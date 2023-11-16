@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Home, Search, Library, Plus, ArrowRight, List } from "lucide-react";
 import Tooltip from "../ui/tooltip";
@@ -7,8 +9,18 @@ import Badge from "../ui/badge";
 interface SidebarProps {}
 
 const Sidebar: React.FC<SidebarProps> = ({}) => {
+  const [showMore, setShowMore] = React.useState<boolean>(false);
+
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
   return (
-    <aside className="w-96 h-full  bg-[#141414]">
+    <aside
+      className={`sticky top-0 ${
+        showMore ? "w-[780px]" : "w-[460px]"
+      }    bg-[#141414]`}
+    >
       <nav className="flex gap-6 p-6 px-4 flex-col border-b-8 border-solid border-neutral-950">
         <a
           className="flex gap-6 text-sm transition-all hover:text-white text-neutral-300 font-medium items-center"
@@ -25,7 +37,6 @@ const Sidebar: React.FC<SidebarProps> = ({}) => {
           <strong>Buscar</strong>{" "}
         </a>
       </nav>
-
       <div className="flex items-center justify-between p-6 px-4">
         <Tooltip
           className="flex gap-2 items-center group"
@@ -46,10 +57,14 @@ const Sidebar: React.FC<SidebarProps> = ({}) => {
           </Tooltip>
 
           <Tooltip content="Mostrar mais">
-            <ArrowRight
-              size={22}
-              className="text-neutral-400 hover:text-neutral-100"
-            />
+            <button className="p-0 m-0" onClick={toggleShowMore}>
+              <ArrowRight
+                size={22}
+                className={`transform ${
+                  showMore ? "rotate-180" : "rotate-0"
+                } text-neutral-400 hover:text-neutral-100`}
+              />
+            </button>
           </Tooltip>
         </div>
       </div>
@@ -72,7 +87,6 @@ const Sidebar: React.FC<SidebarProps> = ({}) => {
           />
         </div>
       </div>
-
       <div className="flex w-full flex-col p-6 px-2">
         <ul>
           <li className="hover:bg-neutral-800 flex gap-2 p-2 transition-all rounded-md cursor-pointer">
@@ -85,7 +99,9 @@ const Sidebar: React.FC<SidebarProps> = ({}) => {
             />
 
             <div className="flex flex-col gap-[-2px]">
-              <h1 className="text-sm font-medium ">Charlie Brown Jr.</h1>
+              <h1 className="text-sm font-medium text-neutral-100 ">
+                Charlie Brown Jr.
+              </h1>
               <span className="text-xs font-medium text-neutral-500">
                 Artista
               </span>

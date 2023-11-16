@@ -1,18 +1,67 @@
+"use client";
+
 import React from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Bell, ChevronLeft, ChevronRight, Users2 } from "lucide-react";
+import NextLink from "next/link";
+import Tooltip from "../ui/tooltip";
+import NextImage from "next/image";
 
-interface NavbarProps {}
+interface INavbarProps {
+  scrolling: boolean;
+}
 
-const Navbar: React.FC<NavbarProps> = ({}) => {
+const Navbar: React.FC<INavbarProps> = ({ scrolling }) => {
   return (
-    <header className="sticy top-0 flex w-full justify-between gap-2 bg-transparent p-6 px-4">
+    <header
+      className={`sticky top-0 z-10 flex transition-all w-full justify-between gap-2 pt-8  px-6 ${
+        scrolling ? "bg-neutral-950 py-4 pt-4" : "bg-transparent p-6"
+      }`}
+    >
       <div className="flex gap-2">
-        <div className="rounded-full w-[30px] h-[30px] flex items-center justify-center bg-neutral-800 transition-all text-neutral-300 hover:text-white">
+        <div className="rounded-full cursor-pointer w-[30px] h-[30px] flex items-center justify-center bg-neutral-950 transition-all text-neutral-300 hover:text-white">
           <ChevronLeft />
         </div>
-        <div className="rounded-full w-[30px] h-[30px] flex items-center justify-center bg-neutral-800 transition-all text-neutral-300 hover:text-white">
+        <div className="rounded-full cursor-pointer w-[30px] h-[30px] flex items-center justify-center bg-neutral-950 transition-all text-neutral-300 hover:text-white">
           <ChevronRight />
         </div>
+      </div>
+
+      <div className="flex gap-2 items-center">
+        <button className="bg-white rounded-full text-xs font-bold p-2 px-3 text-neutral-950 hover:scale-105">
+          Ver planos Premium
+        </button>
+        <Tooltip content="Novidades" classContent={` ${scrolling ? "top-8 bottom-0" : "bottom-8" }`}>
+          <NextLink
+            className="bg-neutral-950 p-1 rounded-full  transition-all hover:text-neutral-200 text-neutral-500"
+            href="/"
+          >
+            <Bell size={20} />
+          </NextLink>
+        </Tooltip>
+
+        <Tooltip content="Atividade dos amigos" classContent={` ${scrolling ? "top-8 bottom-0" : "bottom-8" }`}>
+          <NextLink
+            className="bg-neutral-950 p-1 rounded-full  transition-all hover:text-neutral-200 text-neutral-500"
+            href="/"
+          >
+            <Users2 size={20} />
+          </NextLink>
+        </Tooltip>
+
+        <Tooltip content="matheusscode" classContent={` ${scrolling ? "top-8 bottom-0" : "bottom-8" }`}>
+          <NextLink
+            className="bg-neutral-950  w-[30px] h-[30px] transition-all overflow-hidden rounded-full hover:text-neutral-200 text-neutral-500"
+            href="/"
+          >
+            <NextImage
+              src="https://avatars.githubusercontent.com/u/99546472?v=4"
+              alt="Avatar."
+              width={100}
+              height={100}
+              className="w-full h-full"
+            />
+          </NextLink>
+        </Tooltip>
       </div>
     </header>
   );
