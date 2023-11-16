@@ -13,3 +13,36 @@
 .scrollbar::-webkit-scrollbar-thumb {
   background-color: #f3f3f37f;
 }
+
+.rangebar[type="range"] {
+  width: 100%;
+  height: 4px;
+  accent-color: #e4e4e7;
+  border: none;
+  outline: none;
+}
+
+.rangebar[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 4px !important;
+  height: 4px !important;
+  background: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+  outline: none;
+}
+
+.rangebar[type="range"]:hover::-webkit-slider-thumb {
+  background: #e4e4e7;
+}
+
+.rangebar[type="range"]:active::-webkit-slider-thumb {
+  background: #ffffff;
+}
+
+
+.textinput[type="text"] {
+  accent-color: #e4e4e7;
+}

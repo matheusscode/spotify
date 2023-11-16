@@ -18,7 +18,7 @@ const Sidebar: React.FC<SidebarProps> = ({}) => {
   return (
     <aside
       className={`sticky top-0 ${
-        showMore ? "w-[780px]" : "w-[460px]"
+        showMore ? "w-[600px]" : "w-[560px]"
       }    bg-[#141414]`}
     >
       <nav className="flex gap-6 p-6 px-4 flex-col border-b-8 border-solid border-neutral-950">
@@ -31,7 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({}) => {
         </a>
         <a
           className="flex gap-6 text-sm transition-all hover:text-white text-neutral-300 font-medium items-center"
-          href="/"
+          href="/search"
         >
           <Search />
           <strong>Buscar</strong>{" "}

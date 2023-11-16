@@ -18,10 +18,13 @@ import {
   ChevronUp,
 } from "lucide-react";
 import Tooltip from "../ui/tooltip";
+import usePlaying from "@/src/hooks/use-playing";
 
 interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = ({}) => {
+  const {} = usePlaying();
+
   const [play, setPlay] = React.useState<boolean>(false);
 
   const togglePlay = () => {
@@ -32,7 +35,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
     <footer className=" sticky bottom-0 flex justify-between items-center bg-neutral-950 p-4">
       <div className="flex items-center gap-4">
         <div className="relative group">
-          <div className=" group-hover:opacity-100 z-10 opacity-0 p-1 transition-all right-1 top-1 bg-neutral-600 rounded-full absolute w-[20px] h-[20px] flex justify-center items-center">
+          <div className="group-hover:opacity-100 z-10 opacity-0 p-1 transition-all right-1 top-1 bg-neutral-600 rounded-full absolute w-[20px] h-[20px] flex justify-center items-center">
             <Tooltip content="Expandir">
               <ChevronUp className="text-neutral-300" />
             </Tooltip>
@@ -80,9 +83,15 @@ const Footer: React.FC<FooterProps> = ({}) => {
             onClick={togglePlay}
           >
             {play === true ? (
-              <Play size={18}  className="text-neutral-800 group-hover:text-neutral-950" />
+              <Play
+                size={18}
+                className="text-neutral-800 group-hover:text-neutral-950"
+              />
             ) : (
-              <Pause  size={18} className="text-neutral-800 group-hover:text-neutral-950" />
+              <Pause
+                size={18}
+                className="text-neutral-800 group-hover:text-neutral-950"
+              />
             )}
           </button>
 
@@ -98,10 +107,13 @@ const Footer: React.FC<FooterProps> = ({}) => {
         </div>
         <div className="flex items-center gap-2">
           <strong className="text-xs text-neutral-400 font-bold">2:05</strong>
-          <div className="bg-zinc-600 h-1 rounded-full w-[30rem]">
-            <div className="bg-zinc-200 w-48 h-1 rounded-full " />
+          <div className="w-[30rem]">
+            <input type="range" className="rangebar w-full" />
           </div>
-          <strong className="text-xs text-neutral-400 font-medium">3:09</strong>
+
+          <strong className="text-xs text-neutral-400  font-medium">
+            3:09
+          </strong>
         </div>
       </div>
 
@@ -149,8 +161,8 @@ const Footer: React.FC<FooterProps> = ({}) => {
             />
           </Tooltip>
 
-          <div className="bg-zinc-600 h-1 rounded-full w-24">
-            <div className="bg-zinc-200 w-10 h-1 rounded-full " />
+          <div className=" rounded-full w-24">
+            <input type="range" className="rangebar w-full" />
           </div>
         </div>
       </div>

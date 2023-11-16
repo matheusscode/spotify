@@ -13,7 +13,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ alt, backdrop, content, title }) => {
   return (
     <NextLink href="/">
-      <article className="group rounded-md hover:bg-neutral-800 transition-all duration-200 overflow-hidden p-3 w-[170px] h-auto bg-neutral-900  shadow-md ">
+      <article className="group rounded-md hover:bg-neutral-800 transition-all duration-200 overflow-hidden p-3 w-[180px] h-auto bg-neutral-900  shadow-md ">
         <div className="relative ">
           <NextImage
             className="w-full rounded-md"
@@ -28,7 +28,7 @@ const Card: React.FC<CardProps> = ({ alt, backdrop, content, title }) => {
         </div>
 
         <div className="flex gap-1 my-4 flex-col">
-          <h1 className="text-ellipsis overflow-hidden whitespace-nowrap w-full font-bold text-neutral-100  text-[0.9rem]">
+          <h1 className="text-ellipsis overflow-hidden whitespace-nowrap w-full font-bold text-neutral-100  text-[1rem]">
             {title}Camisa 10 joga bola até na chuva
           </h1>
           <span className="text-[0.8rem] font-medium text-neutral-400">
