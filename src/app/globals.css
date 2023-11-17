@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .scrollbar::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 .scrollbar::-webkit-scrollbar-track {
@@ -11,7 +11,7 @@
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
-  background-color: #f3f3f37f;
+  background-color: #f3f3f359;
 }
 
 .rangebar[type="range"] {
@@ -20,6 +20,10 @@
   accent-color: #e4e4e7;
   border: none;
   outline: none;
+}
+
+.rangebar[type="range"]:hover {
+  accent-color: rgb(74, 222, 128);
 }
 
 .rangebar[type="range"]::-webkit-slider-thumb {
@@ -33,15 +37,6 @@
   border: none;
   outline: none;
 }
-
-.rangebar[type="range"]:hover::-webkit-slider-thumb {
-  background: #e4e4e7;
-}
-
-.rangebar[type="range"]:active::-webkit-slider-thumb {
-  background: #ffffff;
-}
-
 
 .textinput[type="text"] {
   accent-color: #e4e4e7;

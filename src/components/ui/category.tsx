@@ -13,9 +13,9 @@ const Category: React.FC<ICategoryProps> = ({ categorie }) => {
     <NextLink href="/">
       <article
         style={{ background: color }}
-        className={`w-full p-4 h-[240px] shadow-md rounded-md`}
+        className={`w-full p-4 h-[220px] shadow-md rounded-md break-words`}
       >
-        <h1 className="text-2xl text-neutral-200 font-bold">{title}</h1>
+        <h1 className="text-[1.3rem] text-neutral-200 font-bold">{title}</h1>
       </article>
     </NextLink>
   );

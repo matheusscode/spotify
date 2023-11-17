@@ -12,12 +12,9 @@ export default function Home() {
         <Card />
         <Card />
         <Card />
-        <Card />
       </Carousel>
 
- 
       <Carousel title="Feito para matheusscode">
-        <Card />
         <Card />
         <Card />
         <Card />
@@ -33,7 +30,7 @@ export default function Home() {
         <Card />
         <Card />
         <Card />
-        <Card />
+
         <Card />
         <Card />
       </Carousel>
@@ -44,7 +41,7 @@ export default function Home() {
         <Card />
         <Card />
         <Card />
-        <Card />
+
         <Card />
         <Card />
       </Carousel>
@@ -54,7 +51,7 @@ export default function Home() {
         <Card />
         <Card />
         <Card />
-        <Card />
+
         <Card />
         <Card />
         <Card />
@@ -65,7 +62,7 @@ export default function Home() {
         <Card />
         <Card />
         <Card />
-        <Card />
+
         <Card />
         <Card />
         <Card />
@@ -76,7 +73,7 @@ export default function Home() {
         <Card />
         <Card />
         <Card />
-        <Card />
+
         <Card />
         <Card />
         <Card />
@@ -87,7 +84,7 @@ export default function Home() {
         <Card />
         <Card />
         <Card />
-        <Card />
+
         <Card />
         <Card />
         <Card />

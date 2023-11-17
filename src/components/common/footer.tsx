@@ -65,7 +65,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
         </button>
       </div>
 
-      <div className="flex justif] items-center flex-col gap-2">
+      <div className="flex justify-center  items-center flex-col gap-1">
         <div className="flex items-center gap-6">
           <Tooltip content="Ativar ordem aleatória">
             <Shuffle

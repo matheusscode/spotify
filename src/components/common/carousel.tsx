@@ -15,7 +15,7 @@ const Carousel: React.FC<CarouselProps> = ({ children, title }) => {
           Mostrar tudo
         </NextLink>
       </div>
-      <div className="flex justify-between gap-2 py-2">{children}</div>
+      <div className="flex justify-between gap-1 py-2">{children}</div>
     </div>
   );
 };
