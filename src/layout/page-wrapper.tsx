@@ -33,11 +33,11 @@ export default function PageWrapper({ children }: IPageWrapperProps) {
   return (
     <div
       ref={wrapperRef}
-      className={`flex flex-col w-full h-screen transition-all overflow-hidden scrollbar bg-gradient-to-b bg-no-repeat ${
+      className={`flex flex-col w-full h-screen transition-all overflow-hidden scrollbar max-[600px]:scroll-hidden bg-gradient-to-b bg-no-repeat ${
         isScrolled
           ? "from-neutral-950   to-neutral-950"
           : "from-neutral-800  via-neutral-950  to-neutral-950"
-      }   border-l-[0.4rem] border-solid border-neutral-950 overflow-y-scroll`}
+      } max-[1200px]:border-none   border-l-[0.4rem] border-solid border-neutral-950 overflow-y-scroll`}
     >
       <div className="flex flex-col flex-1 w-full ">
         <Header scrolling={isScrolled} />
