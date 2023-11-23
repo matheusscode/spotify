@@ -8,10 +8,13 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ children, title }) => {
   return (
-    <div className="w-full h-auto px-4 overflow-hidden flex flex-col gap-2 ">
+    <div className="w-full h-auto px-4 scroll-hidden  overflow-hidden overflow-x-scroll flex flex-col gap-2 ">
       <div className="flex justify-between items-center ">
         <h1 className="font-bold text-xl text-neutral-50">{title}</h1>
-        <NextLink href="/" className="text-neutral-400 text-xs font-bold hover:underline">
+        <NextLink
+          href="/"
+          className="text-neutral-400 text-xs font-bold hover:underline"
+        >
           Mostrar tudo
         </NextLink>
       </div>

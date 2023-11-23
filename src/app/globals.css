@@ -41,3 +41,7 @@
 .textinput[type="text"] {
   accent-color: #e4e4e7;
 }
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}

@@ -1,7 +1,7 @@
 import Carousel from "../components/common/carousel";
 import Card from "../components/ui/card";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main id="page" className="w-full px-2 flex flex-col  gap-4 mb-40 mt-4 ">
       <Carousel title="Tocados Recentemente">

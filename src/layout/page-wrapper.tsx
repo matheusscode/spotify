@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Navbar from "../components/common/navbar";
+import Header from "../components/common/header";
 
 interface IPageWrapperProps {
   children: React.ReactNode;
@@ -40,7 +40,7 @@ export default function PageWrapper({ children }: IPageWrapperProps) {
       }   border-l-[0.4rem] border-solid border-neutral-950 overflow-y-scroll`}
     >
       <div className="flex flex-col flex-1 w-full ">
-        <Navbar scrolling={isScrolled} />
+        <Header scrolling={isScrolled} />
         {children}
       </div>
     </div>
