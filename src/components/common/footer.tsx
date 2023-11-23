@@ -33,8 +33,8 @@ const Footer: React.FC<FooterProps> = ({}) => {
   };
 
   return (
-    <footer className=" sticky bottom-0 flex justify-between items-center bg-neutral-950 p-4 max-[1200px]:py-6">
-      <div className="flex items-center gap-4 max-[1200px]:gap-2">
+    <footer className="relative flex justify-between items-center bg-neutral-950 p-4 max-[600px]:px-0 max-[600px]:py-4 max-[1200px]:py-6">
+      <div className="flex items-center gap-4 max-[1200px]:gap-2 max-[800px]:px-2">
         <div className="relative group">
           <div className="max-[1200px]:hidden group-hover:opacity-100 z-10 opacity-0 p-1 transition-all right-1 top-1 bg-neutral-600 rounded-full absolute w-[20px] h-[20px] flex justify-center items-center">
             <Tooltip content="Expandir">
@@ -168,7 +168,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
         </div>
       </div>
 
-      <div className="hidden gap-4 items-center max-[1200px]:flex">
+      <div className="hidden gap-4 items-center max-[1200px]:flex max-[800px]:px-2">
         <button className="text-neutral-400">
           <MonitorSmartphone />
         </button>
@@ -178,6 +178,10 @@ const Footer: React.FC<FooterProps> = ({}) => {
         <button className="text-white">
           <Play />
         </button>
+      </div>
+
+      <div className="absolute bottom-0 w-full bg-neutral-600 h-[2px]">
+        <div className="w-60 bg-neutral-200 h-[2px]" />
       </div>
     </footer>
   );

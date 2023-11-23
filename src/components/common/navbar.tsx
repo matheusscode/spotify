@@ -6,7 +6,7 @@ interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = ({}) => {
   return (
-    <nav className=" bg-gradient-to-b bg-no-repeat bg-neutral-950 w-full py-2 pb-4 hidden max-[1200px]:block">
+    <nav className=" bg-gradient-to-b bg-no-repeat bg-neutral-950 w-full max-[1200px]:pb-4 max-[1200px]:pt-4 py-2 hidden max-[1200px]:block">
       <ul className="flex items-center justify-between gap-1 w-full max-w-[500px] m-auto px-6 max-[600px]:px-2 ">
         <li>
           <NextLink
@@ -14,7 +14,9 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             href="/"
           >
             <Home size={24} />
-            <span className="text-neutral-600 transition-all group-hover:text-white text-[12px]">Início</span>
+            <span className="text-neutral-600 transition-all group-hover:text-white text-[12px]">
+              Início
+            </span>
           </NextLink>
         </li>
         <li>
@@ -23,7 +25,9 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             href="/"
           >
             <Search size={24} />
-            <span className="text-neutral-600 transition-all group-hover:text-white text-[12px]">Buscar</span>
+            <span className="text-neutral-600 transition-all group-hover:text-white text-[12px]">
+              Buscar
+            </span>
           </NextLink>
         </li>
         <li>
@@ -32,7 +36,9 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             href="/"
           >
             <Library size={24} />
-            <span className="text-neutral-600 transition-all group-hover:text-white text-[12px]">Sua Biblioteca</span>
+            <span className="text-neutral-600 transition-all group-hover:text-white text-[12px]">
+              Sua Biblioteca
+            </span>
           </NextLink>
         </li>
         <li>
@@ -41,7 +47,9 @@ const Navbar: React.FC<NavbarProps> = ({}) => {
             href="/"
           >
             <Gem size={24} />
-            <span className="text-neutral-600 transition-all group-hover:text-white text-[12px]">Premium</span>
+            <span className="text-neutral-600 transition-all group-hover:text-white text-[12px]">
+              Premium
+            </span>
           </NextLink>
         </li>
       </ul>
